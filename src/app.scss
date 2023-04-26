@@ -1,0 +1,24 @@
+.App{
+    height: 100vh;
+}
+
+.sections{
+    width: 100%;
+    height: calc(100vh - 70px); 
+    background-color: #ffa07a;
+    position: relative;
+    top: 70px;
+    scroll-snap-type: y mandatory;  // scroll and snapp to speed up scrolling on y axis for each section . it goes to the closest section
+    scrollbar-width: none; //only works for firefox
+    scroll-behavior: smooth; //smooth scrolling
+    &::-webkit-scrollbar{
+        display: none; // works on everything
+    }
+
+    // > * means for each section we are applying these attributes
+    > *{
+        width: 100vw;
+        height: calc(100vh - 70px); 
+        scroll-snap-align: start;
+    }
+}
