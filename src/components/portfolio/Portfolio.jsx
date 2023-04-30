@@ -66,7 +66,7 @@ export default function Portfolio() {
 
         <div className="cont">
             {data.map((d) => (
-                <div className="item" onClick={d.url}>
+                <div className="item" onClick={() => window.open(d.url)} target="_blank" >
                 <img src={d.img} alt="" />
                 <h3>{d.title}</h3>
             </div>
